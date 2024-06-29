@@ -1,0 +1,136 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    /* direction: rtl; Right-to-left direction */
+    text-align: right; /* Right align text */
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header styles */
+header {
+    background-color: #ac1616;
+    padding: 10px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+header img {
+    width: 160px;
+    order: 2; /* تغيير ترتيب الصورة إلى اليمين */
+}
+
+header h1 {
+    margin-left: 20px; /* تغيير التباعد إلى اليسار */
+    order: 1; /* تغيير ترتيب النص إلى اليسار */
+}
+
+
+
+/* Main styles */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.input-box,
+.select-box,
+.select-box1,
+.select-box2,
+.select-box3,.select-box4,.select-box5
+   
+        {
+    margin-bottom: 20px;
+    flex-basis: calc(30% - 10px); /* تحديد العرض ليشغل 30% من العرض الكلي مع هوامش 10 بكسل */
+}
+
+
+.number,
+.dateOfBairth,
+.national_id,
+.upload_id,
+.realase_date,
+.card_issuing,
+.photo,
+.addres,
+.Decider-NMU {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 13px;
+    border: 3px solid #ccc;
+    border-radius: 13px;
+    font-size: 15px;
+}
+
+select {
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header img {
+        width: 100px;
+    }
+
+    h1 {
+        flex-direction: column;
+    }
+
+    .number,
+    .dateOfBairth,
+    .national_id,
+    .upload_id,
+    .realase_date,
+    .card_issuing,
+    .photo,
+    .addres,
+    .Decider-NMU {
+        margin-bottom: 10px;
+    }
+
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+}
